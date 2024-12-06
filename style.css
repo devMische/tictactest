@@ -1,0 +1,66 @@
+body {
+    box-sizing: border-box;
+    background-color: rgba(40,38,41,1);
+}
+
+#tictactoe {
+    display: grid;
+    grid-template-columns: 33.33333% 33.333333% 33.333333%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+
+.gitem {
+    cursor: pointer;
+}
+
+
+.p1 {
+    background: url(img/x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(1,1,1,0.0);
+    
+}
+.p2 {
+    background: url(img/o.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.win {
+    background-color: rgba(65, 59, 70, 0.5);
+}
+    
+
+#i1 {
+    border-bottom: 2px solid white;
+}
+#i2 {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+#i3 {
+    border-bottom: 2px solid white;
+}
+#i5 {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+#i7 {
+    border-top: 2px solid white;
+}
+#i8 {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+}
+#i9 {
+    border-top: 2px solid white;
+}
