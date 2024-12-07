@@ -1,66 +1,63 @@
+* {
+  --fgcol1: #685467;
+}
+
 body {
-    box-sizing: border-box;
-    background-color: rgba(40,38,41,1);
+  box-sizing: border-box;
+  background-color: #30212a;
 }
 
 #tictactoe {
-    display: grid;
-    grid-template-columns: 33.33333% 33.333333% 33.333333%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
+  display: grid;
+  grid-template-columns: 33.33333% 33.333333% 33.333333%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 .gitem {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 .p1 {
-    background: url(img/x.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(1,1,1,0.0);
-    
+  background: url(img/x.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .p2 {
-    background: url(img/o.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  background: url(img/o.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .win {
-    background-color: rgba(65, 59, 70, 0.5);
+  background-color: rgba(65, 59, 70, 0.5);
 }
-    
 
 #i1 {
-    border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--fgcol1);
 }
 #i2 {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
+  border-left: 2px solid var(--fgcol1);
+  border-right: 2px solid var(--fgcol1);
+  border-bottom: 2px solid var(--fgcol1);
 }
 #i3 {
-    border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--fgcol1);
 }
 #i5 {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+  border-left: 2px solid var(--fgcol1);
+  border-right: 2px solid var(--fgcol1);
 }
 #i7 {
-    border-top: 2px solid white;
+  border-top: 2px solid var(--fgcol1);
 }
 #i8 {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-top: 2px solid white;
+  border-left: 2px solid var(--fgcol1);
+  border-right: 2px solid var(--fgcol1);
+  border-top: 2px solid var(--fgcol1);
 }
 #i9 {
-    border-top: 2px solid white;
+  border-top: 2px solid var(--fgcol1);
 }
