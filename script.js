@@ -1,6 +1,7 @@
 var player1 = true;
 var playing = true;
 var round = 0;
+var hue = 0;
 
 const tictactoe = document.getElementById("tictactoe");
 const i1 = document.getElementById("i1");
@@ -32,6 +33,12 @@ function setSign(e) {
     var element = e.target || e.srcElement;
 
     if (document.getElementById(element.id).classList.length < 2 && playing) {
+      hue += 13;
+      if (hue > 360) {
+        hue -= 360;
+      }
+      document.body.style.background = `hsl(${hue}, 25%, 16%)`;
+
       if (player1) {
         document.getElementById(element.id).classList.add("p1");
         player1 = false;

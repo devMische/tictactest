@@ -1,10 +1,11 @@
 * {
-  --fgcol1: #685467;
+  --fgcol1: #e5e5e5;
+  --line: 4px;
 }
 
 body {
   box-sizing: border-box;
-  background-color: #30212a;
+  background-color: hsl(0, 25%, 16%);
 }
 
 #tictactoe {
@@ -36,28 +37,28 @@ body {
 }
 
 #i1 {
-  border-bottom: 2px solid var(--fgcol1);
+  border-bottom: var(--line) solid var(--fgcol1);
 }
 #i2 {
-  border-left: 2px solid var(--fgcol1);
-  border-right: 2px solid var(--fgcol1);
-  border-bottom: 2px solid var(--fgcol1);
+  border-left: var(--line) solid var(--fgcol1);
+  border-right: var(--line) solid var(--fgcol1);
+  border-bottom: var(--line) solid var(--fgcol1);
 }
 #i3 {
-  border-bottom: 2px solid var(--fgcol1);
+  border-bottom: var(--line) solid var(--fgcol1);
 }
 #i5 {
-  border-left: 2px solid var(--fgcol1);
-  border-right: 2px solid var(--fgcol1);
+  border-left: var(--line) solid var(--fgcol1);
+  border-right: var(--line) solid var(--fgcol1);
 }
 #i7 {
-  border-top: 2px solid var(--fgcol1);
+  border-top: var(--line) solid var(--fgcol1);
 }
 #i8 {
-  border-left: 2px solid var(--fgcol1);
-  border-right: 2px solid var(--fgcol1);
-  border-top: 2px solid var(--fgcol1);
+  border-left: var(--line) solid var(--fgcol1);
+  border-right: var(--line) solid var(--fgcol1);
+  border-top: var(--line) solid var(--fgcol1);
 }
 #i9 {
-  border-top: 2px solid var(--fgcol1);
+  border-top: var(--line) solid var(--fgcol1);
 }
