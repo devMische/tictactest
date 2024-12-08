@@ -1,6 +1,6 @@
 var player1 = true;
 var playing = true;
-var round = 0;
+var round = 1;
 var hue = 0;
 
 const tictactoe = document.getElementById("tictactoe");
@@ -25,15 +25,17 @@ i8.addEventListener("click", setSign);
 i9.addEventListener("click", setSign);
 
 function setSign(e) {
-  round += 1;
+  
 
-  if (playing == false || round > 9) {
+  if (playing == false || round == 10) {
     reset();
   } else {
     var element = e.target || e.srcElement;
 
     if (document.getElementById(element.id).classList.length < 2 && playing) {
+      round += 1;
       hue += 13;
+
       if (hue > 360) {
         hue -= 360;
       }
@@ -176,5 +178,5 @@ function reset() {
 
   playing = true;
   player1 = true;
-  round = 0;
+  round = 1;
 }
