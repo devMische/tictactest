@@ -19,17 +19,15 @@ body {
 
 .gitem {
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .p1 {
   background: url(img/x.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .p2 {
   background: url(img/o.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .win {
