@@ -1,6 +1,6 @@
 * {
   --fgcol1: #e5e5e5;
-  --line: 4px;
+  --line: 4px solid #e5e5e5;
 }
 
 body {
@@ -33,32 +33,32 @@ body {
 }
 
 .win {
-  background-color: rgba(65, 59, 70, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 #i1 {
-  border-bottom: var(--line) solid var(--fgcol1);
+  border-bottom: var(--line);
 }
 #i2 {
-  border-left: var(--line) solid var(--fgcol1);
-  border-right: var(--line) solid var(--fgcol1);
-  border-bottom: var(--line) solid var(--fgcol1);
+  border-left: var(--line);
+  border-right: var(--line);
+  border-bottom: var(--line);
 }
 #i3 {
-  border-bottom: var(--line) solid var(--fgcol1);
+  border-bottom: var(--line);
 }
 #i5 {
-  border-left: var(--line) solid var(--fgcol1);
-  border-right: var(--line) solid var(--fgcol1);
+  border-left: var(--line);
+  border-right: var(--line);
 }
 #i7 {
-  border-top: var(--line) solid var(--fgcol1);
+  border-top: var(--line);
 }
 #i8 {
-  border-left: var(--line) solid var(--fgcol1);
-  border-right: var(--line) solid var(--fgcol1);
-  border-top: var(--line) solid var(--fgcol1);
+  border-left: var(--line);
+  border-right: var(--line);
+  border-top: var(--line);
 }
 #i9 {
-  border-top: var(--line) solid var(--fgcol1);
+  border-top: var(--line);
 }
