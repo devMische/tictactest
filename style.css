@@ -1,11 +1,13 @@
 * {
   --fgcol1: #e5e5e5;
-  --line: 4px solid #e5e5e5;
+  --line: 2px solid #e5e5e5;
 }
 
 body {
+  font-family: monospace;
   box-sizing: border-box;
   background-color: hsl(0, 25%, 16%);
+  color: var(--fgcol1);
 }
 
 #tictactoe {
@@ -15,6 +17,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.infocontainer {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.playerinfo {
+  padding: 10px;
 }
 
 .gitem {

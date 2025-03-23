@@ -1,5 +1,9 @@
 var player1 = true;
 var playing = true;
+
+var count_player1 = 0;
+var count_player2 = 0;
+var gamemove = 1;
 var round = 1;
 var hue = 0;
 
@@ -14,6 +18,11 @@ const i7 = document.getElementById("i7");
 const i8 = document.getElementById("i8");
 const i9 = document.getElementById("i9");
 
+const info_rounds = document.getElementById("info_rounds");
+const info_p1 = document.getElementById("info_p1");
+const info_p2 = document.getElementById("info_p2");
+info_p1.classList.add("win");
+
 i1.addEventListener("click", setSign);
 i2.addEventListener("click", setSign);
 i3.addEventListener("click", setSign);
@@ -25,15 +34,14 @@ i8.addEventListener("click", setSign);
 i9.addEventListener("click", setSign);
 
 function setSign(e) {
-  
-
-  if (playing == false || round == 10) {
+  if (playing == false || gamemove == 10) {
+    round += 1;
     reset();
   } else {
     var element = e.target || e.srcElement;
 
     if (document.getElementById(element.id).classList.length < 2 && playing) {
-      round += 1;
+      gamemove += 1;
       hue += 13;
 
       if (hue > 360) {
@@ -43,15 +51,38 @@ function setSign(e) {
 
       if (player1) {
         document.getElementById(element.id).classList.add("p1");
+        checkWin();
         player1 = false;
+        if (playing) {
+          info_p2.classList.add("win");
+          info_p1.classList = "playerinfo";
+        }
       } else {
         document.getElementById(element.id).classList.add("p2");
+        checkWin();
         player1 = true;
+        if (playing) {
+          info_p1.classList.add("win");
+          info_p2.classList = "playerinfo";
+        }
       }
-
-      checkWin();
     }
   }
+}
+
+function win() {
+  if (player1) {
+    count_player1 += 1;
+  } else {
+    count_player2 += 1;
+  }
+  info_p1.innerText = "Player X: " + count_player1;
+  info_p2.innerText = "Player O: " + count_player2;
+
+  info_p1.classList = "playerinfo";
+  info_p2.classList = "playerinfo";
+
+  playing = false;
 }
 
 function checkWin() {
@@ -64,7 +95,7 @@ function checkWin() {
     i2.classList.add("win");
     i3.classList.add("win");
 
-    playing = false;
+    win();
   }
 
   if (
@@ -76,7 +107,7 @@ function checkWin() {
     i5.classList.add("win");
     i6.classList.add("win");
 
-    playing = false;
+    win();
   }
 
   if (
@@ -88,7 +119,7 @@ function checkWin() {
     i8.classList.add("win");
     i9.classList.add("win");
 
-    playing = false;
+    win();
   }
 
   if (
@@ -100,7 +131,7 @@ function checkWin() {
     i4.classList.add("win");
     i7.classList.add("win");
 
-    playing = false;
+    win();
   }
 
   if (
@@ -111,7 +142,7 @@ function checkWin() {
     i5.classList.add("win");
     i2.classList.add("win");
     i8.classList.add("win");
-    playing = false;
+    win();
   }
 
   if (
@@ -123,7 +154,7 @@ function checkWin() {
     i6.classList.add("win");
     i3.classList.add("win");
 
-    playing = false;
+    win();
   }
 
   if (
@@ -135,7 +166,7 @@ function checkWin() {
     i5.classList.add("win");
     i9.classList.add("win");
 
-    playing = false;
+    win();
   }
 
   if (
@@ -147,7 +178,7 @@ function checkWin() {
     i7.classList.add("win");
     i3.classList.add("win");
 
-    playing = false;
+    win();
   }
 }
 
@@ -164,6 +195,21 @@ function newSize() {
 newSize();
 window.addEventListener("resize", newSize);
 
+// toggle player
+function togglePlayer() {
+  if (round % 2 === 0) {
+    console.log("player2");
+    player1 == false;
+    info_p2.classList.add("win");
+    info_p1.classList = "playerinfo";
+  } else {
+    console.log("player1");
+    player1 == true;
+    info_p1.classList.add("win");
+    info_p2.classList = "playerinfo";
+  }
+}
+
 // reset
 function reset() {
   i1.classList = "gitem";
@@ -177,6 +223,7 @@ function reset() {
   i9.classList = "gitem";
 
   playing = true;
-  player1 = true;
-  round = 1;
+  togglePlayer();
+  gamemove = 1;
+  info_rounds.innerHTML = "Round: " + round;
 }
