@@ -42,7 +42,7 @@ function setSign(e) {
 
     if (document.getElementById(element.id).classList.length < 2 && playing) {
       gamemove += 1;
-      hue += 13;
+      hue += 3;
 
       if (hue > 360) {
         hue -= 360;
